@@ -44,12 +44,7 @@ public class OrdemServico {
 	@JsonIgnore
 	private Cliente cliente;
 
-	public OrdemServico() {
-		super();
-		this.setDataAbertura(LocalDateTime.now());
-		this.setPrioridade(Prioridade.BAIXA);
-		this.setStatus(Status.ABERTO);
-	}
+	
 
 	public OrdemServico(Integer id, Prioridade prioridade,
 			String observacoes, Status status, Tecnico tecnico, Cliente cliente) {
@@ -103,7 +98,9 @@ public class OrdemServico {
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
-	
-	
+
+	public OrdemServico() {
+		super();
+	}
 
 }
